@@ -66,6 +66,14 @@ registration and the multi-atlas baselines. Every source is cited in
 :doc:`references`, and :doc:`literature` explains which paper drove which
 decision.
 
+Handling clinical data
+----------------------
+
+Imaging data stayed on-premises under the data-use agreements: no images,
+overlays, or identifiers went to external services, and image analysis ran in
+local scripts that report aggregates. Results on the unlabelled clinical
+cohort are described as agreement with a reference method, not accuracy.
+
 What I would do next
 --------------------
 
@@ -82,8 +90,7 @@ Where to look
    :widths: 30 70
 
    * - 10 minutes
-     - :doc:`experiments` (hypothesis → result → decision for each step) and
-       :doc:`lessons`
+     - :doc:`experiments` (hypothesis → result → decision for each step)
    * - The evidence
      - :doc:`results`, :doc:`training_dynamics`
    * - Depth

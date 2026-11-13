@@ -90,6 +90,6 @@ Statistical precision
 With :math:`n=30` and a between-subject SD of left Dice of about 0.06, the
 standard error of a method mean is about :math:`0.06/\sqrt{30}\approx0.011`.
 The nnU-Net vs MAPER difference in left Dice (0.049) is therefore about four
-standard errors. That is a back-of-the-envelope calculation, not a formal test.
-A paired test on the same brains would be tighter, and is listed as future work
-in :doc:`../lessons`.
+standard errors. Because every method is scored on the same brains, a paired
+test is tighter still: :ref:`paired-stats` reports Wilcoxon signed-rank tests
+with bootstrap confidence intervals and Holm correction.

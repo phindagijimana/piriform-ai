@@ -1,9 +1,37 @@
-Usage
-=====
+Running the code
+================
 
-This page lists the command-line entry points in the order they are run.
-Paths default to the original cluster layout. Set them through environment
-variables or edit the ``ROOT`` constants.
+The command-line entry points, in the order they are run. Paths point at a
+placeholder root (``/path/to/``); set them through environment variables or
+edit the ``ROOT`` constants. Imaging data are not included.
+
+Environments
+------------
+
+Three separate environments are needed, because SynthSeg's TensorFlow 2.2
+cannot coexist with the PyTorch build nnU-Net v2 requires.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 45 35
+
+   * - Environment
+     - Contents
+     - Used for
+   * - nnU-Net
+     - Apptainer image with PyTorch + ``nnunetv2``
+     - Planning, training, inference
+   * - SynthSeg
+     - Python 3.8, TensorFlow 2.2, SynthSeg source
+     - SynthSeg-PC training and validation
+   * - Registration
+     - ANTs, MIRTK, NiftySeg
+     - Brain extraction, atlas warps, MAPER, JLF
+
+Training ran on NVIDIA L40S GPUs split into 24 GB MIG slices. On these slices
+cuDNN has no usable 3D convolution engine, so every nnU-Net command goes
+through ``code/nnunet/nnunet_entry.py``, which disables cuDNN
+(:doc:`programming/nnunet_training`).
 
 1. Prepare datasets
 -------------------

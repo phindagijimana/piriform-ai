@@ -55,16 +55,9 @@ At a glance
 
    In-domain comparison on the Hammers atlas (n=30, each brain held out).
 
-How to read these docs
-----------------------
-
-* **New to the project?** Start with :doc:`overview`, then :doc:`workflows`.
-* **Want the theory and maths?** Read the :ref:`Theory <theory-toc>` section
-  in order. Each page derives what the code does.
-* **Want the code?** The :ref:`Programming <programming-toc>` section walks
-  through the implementation function by function.
-* **Want the results?** See :doc:`experiments` (the experiment log with
-  hypotheses) and :doc:`results`.
+Short on time? Read :doc:`reviewers`. Otherwise start with :doc:`overview`;
+the theory pages derive what the code does, and the programming pages walk
+through it.
 
 .. toctree::
    :maxdepth: 2
@@ -73,10 +66,8 @@ How to read these docs
    reviewers
    overview
    literature
-   installation
-   usage
    workflows
-   outputs
+   usage
 
 .. _theory-toc:
 
@@ -104,7 +95,6 @@ How to read these docs
    programming/synthseg_training
    programming/inference
    programming/evaluation
-   programming/hpc
 
 .. toctree::
    :maxdepth: 2
@@ -113,8 +103,6 @@ How to read these docs
    experiments
    training_dynamics
    results
-   troubleshooting
-   lessons
 
 .. toctree::
    :maxdepth: 1
@@ -122,4 +110,3 @@ How to read these docs
 
    citing
    references
-   glossary

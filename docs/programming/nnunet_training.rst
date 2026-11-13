@@ -6,7 +6,7 @@ Entry point with cuDNN disabled
 
 On MIG-partitioned L40S GPUs in this container, cuDNN could not find a 3D
 convolution engine through either its new (v8) or legacy API
-(:doc:`../troubleshooting`). Rather than patching nnU-Net, a thin entry point
+(``FIND was unable to find an engine``). Rather than patching nnU-Net, a thin entry point
 sets the backend flags **before** nnU-Net is imported and then dispatches to
 the standard console entry points:
 
@@ -52,7 +52,7 @@ checkpoints:
    :end-before: python3 "${SCRIPT_DIR}/make_nnunet_splits.py"
 
 ``sbatch --parsable`` returns only the job ID, so ``jid=$(submit_one ...)``
-captures a clean value for the next dependency (:doc:`hpc`).
+captures a clean value for the next dependency.
 
 Worker
 ------

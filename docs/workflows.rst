@@ -69,7 +69,7 @@ Workflow A: supervised nnU-Net (Datasets 001–007)
    (:doc:`theory/losses`) with mirroring disabled (:ref:`mirroring-proof`).
 
 ``hop``
-   Slurm chaining with ``afterany`` dependencies (:doc:`programming/hpc`).
+   Slurm chaining with ``afterany`` dependencies (:doc:`programming/nnunet_training`).
 
 Workflow B: SynthSeg-PC
 -----------------------

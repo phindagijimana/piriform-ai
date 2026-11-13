@@ -40,3 +40,6 @@ docs/_build/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# Working notes kept off GitHub
+local/
