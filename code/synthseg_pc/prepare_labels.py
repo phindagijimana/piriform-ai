@@ -63,7 +63,7 @@ def subject_paths(i: int) -> tuple[Path, Path, Path]:
 
 
 def hammers_id(case: str) -> int:
-    # Hammers_004 → 4
+    # Hammers_NNN → NNN as int
     return int(case.split("_")[1])
 
 

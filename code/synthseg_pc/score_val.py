@@ -36,7 +36,7 @@ def dice_jaccard(pred: np.ndarray, gold: np.ndarray, lab: int) -> tuple[float, f
 
 
 def match_pred(gt_name: str, pred_dir: Path) -> Path | None:
-    # GT Hammers_004_lh.nii.gz → pred Hammers_004_lh_0000_synthseg.nii.gz
+    # GT <case>_lh.nii.gz → pred <case>_lh_0000_synthseg.nii.gz
     stem = gt_name.replace(".nii.gz", "")
     cands = [
         pred_dir / f"{stem}_0000_synthseg.nii.gz",
