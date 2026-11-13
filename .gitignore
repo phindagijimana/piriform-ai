@@ -1,0 +1,42 @@
+# Imaging data, labels, predictions: never commit (DUA-governed)
+*.nii
+*.nii.gz
+*.mgz
+*.mgh
+*.dcm
+*.img
+*.hdr
+*.npz
+*.npy
+*.pkl
+
+# Model weights and checkpoints
+*.h5
+*.pth
+*.pt
+*.ckpt
+models/
+checkpoints/
+
+# Per-subject tables, logs, data
+data/
+tables/
+logs/
+*.tsv
+*.csv
+*.log
+*.out
+*.err
+
+# Secrets
+.env
+*token*
+*.key
+
+# Docs build
+docs/_build/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
