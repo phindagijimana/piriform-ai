@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you refer to this work, please cite it as below."
+title: "piriform-ai: training deep-learning models to segment the piriform cortex on brain MRI"
+type: software
+authors:
+  - family-names: Ndagijimana
+    given-names: Philbert
+date-released: 2026-11-13
+repository-code: "https://github.com/phindagijimana/piriform-ai"
+url: "https://phindagijimana.github.io/piriform-ai/"
+keywords:
+  - piriform cortex
+  - MRI segmentation
+  - nnU-Net
+  - SynthSeg
+  - multi-atlas segmentation
+  - domain shift

@@ -22,7 +22,21 @@ policy.
 This repository
 ---------------
 
-.. code-block:: text
+If you refer to this work, please cite:
 
-   phindagijimana. piriform-ai: training deep-learning models to segment the
-   piriform cortex on brain MRI. 2026. https://github.com/phindagijimana/piriform-ai
+   Ndagijimana P. *piriform-ai: training deep-learning models to segment the
+   piriform cortex on brain MRI.* 2026.
+   https://github.com/phindagijimana/piriform-ai
+
+.. code-block:: bibtex
+
+   @software{ndagijimana_piriform_ai_2026,
+     author = {Ndagijimana, Philbert},
+     title  = {piriform-ai: training deep-learning models to segment the
+               piriform cortex on brain MRI},
+     year   = {2026},
+     url    = {https://github.com/phindagijimana/piriform-ai}
+   }
+
+GitHub also offers this citation through the "Cite this repository" button,
+generated from ``CITATION.cff``.

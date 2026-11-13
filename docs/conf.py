@@ -2,8 +2,8 @@
 from __future__ import annotations
 
 project = "piriform-ai"
-author = "phindagijimana"
-copyright = "2026, phindagijimana"
+author = "Philbert Ndagijimana"
+copyright = "2026, Philbert Ndagijimana"
 release = "0.1"
 
 extensions = [

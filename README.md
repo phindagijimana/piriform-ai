@@ -2,7 +2,7 @@
 
 [![docs](https://github.com/phindagijimana/piriform-ai/actions/workflows/docs.yml/badge.svg)](https://phindagijimana.github.io/piriform-ai/)
 
-**Documentation: <https://phindagijimana.github.io/piriform-ai/>**
+**Author:** Philbert Ndagijimana · **Documentation: <https://phindagijimana.github.io/piriform-ai/>**
 
 An end-to-end record of training, evaluating, and stress-testing AI segmentation models for the **piriform cortex** on brain MRI. The documentation site explains the **theory and mathematics** behind every step and walks through the **code** function by function. It also logs each **experiment** as hypothesis, design, result, and decision. Every method choice is tied to a peer-reviewed source.
 
@@ -58,3 +58,20 @@ The code is a snapshot of the working scripts. Paths point at a placeholder root
 ## Tech stack
 
 nnU-Net v2 (PyTorch) · SynthSeg (TensorFlow 2.2) · ANTs (registration, JLF) · MIRTK/NiftySeg (MAPER) · nibabel / NumPy / SciPy · Slurm on NVIDIA L40S (MIG 24 GB slices) · Apptainer · Sphinx
+
+## Citation
+
+If you refer to this work, please cite:
+
+> Ndagijimana P. *piriform-ai: training deep-learning models to segment the piriform cortex on brain MRI.* 2026. https://github.com/phindagijimana/piriform-ai
+
+```bibtex
+@software{ndagijimana_piriform_ai_2026,
+  author = {Ndagijimana, Philbert},
+  title  = {piriform-ai: training deep-learning models to segment the piriform cortex on brain MRI},
+  year   = {2026},
+  url    = {https://github.com/phindagijimana/piriform-ai}
+}
+```
+
+Please also cite the methods this work builds on (Steinbart et al. 2023, Isensee et al. 2021, Billot et al. 2023, Mauri et al. 2025); see the [Citing](https://phindagijimana.github.io/piriform-ai/citing.html) page.
