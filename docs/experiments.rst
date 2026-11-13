@@ -28,7 +28,9 @@ E1 · Stage A: supervised nnU-Net, Dataset001 (Final)
    methods in-domain.
 :Design: ``3d_fullres``, no mirroring, locked 5-fold, 1000 epochs, cuDNN off.
 :Result: Dice 0.708 / 0.693 vs MAPER 0.659 / 0.627 and JLF 0.659 / 0.613.
-   It is better on every metric, including volume error (75 vs 84 vs 150 mm³ left).
+   Overlap and surface distance are significantly better than both baselines
+   (paired Wilcoxon, Holm-corrected p ≤ 0.003). Volume error is significantly
+   better than JLF but **not** than MAPER (p = 0.44); see :ref:`paired-stats`.
 :Decision: In-domain question answered. Move to multi-site.
 
 E2 · Stage B: Hammers + ADNI, Dataset003 (Parked)

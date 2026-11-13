@@ -1,0 +1,25 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: pip install numpy scipy nibabel pytest
+      - name: Byte-compile all Python
+        run: python -m compileall -q code figures tests
+      - name: Unit and self-tests (synthetic data only)
+        run: python -m pytest -q tests

@@ -52,7 +52,7 @@ def hammers_three_way() -> None:
     axes[1].text(-0.55, 0.72, "dashed line: published MAPER\nbar, Jaccard ≈ 0.50\n(Steinbart et al. 2023)",
                  fontsize=8, va="bottom", ha="left")
     axes[0].legend(handles=[b1[0], b2[0]], labels=["Left", "Right"], frameon=False, loc="upper right")
-    fig.suptitle("Stage A: supervised nnU-Net beats both atlas methods in-domain", fontweight="bold")
+    fig.suptitle("Stage A: nnU-Net has higher overlap than both atlas methods in-domain", fontweight="bold")
     fig.tight_layout()
     fig.savefig(OUT / "hammers_three_way.png", dpi=160)
     plt.close(fig)

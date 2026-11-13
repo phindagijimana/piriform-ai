@@ -83,3 +83,13 @@ Several modules include a synthetic self-test that runs without patient data:
 
    python code/evaluation/make_pc_crop.py --self-test
    python code/evaluation/score_hammers_stage_a.py --self-test
+   python code/evaluation/paired_stats.py --self-test
+
+Known-answer unit tests for the metric library (Dice, surface distance,
+6-connected topology, the topology fix) and the self-tests above run in CI on
+every push:
+
+.. code-block:: bash
+
+   pip install numpy scipy nibabel pytest
+   python -m pytest -q tests

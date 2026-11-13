@@ -36,5 +36,6 @@ A snapshot of the working scripts behind the write-up. They are shared to show t
 | `warp_atlas_pc_prior.sh` | Registers the atlas PC to a subject to get a deployable crop centre |
 | `qc_priorcrop.py` | Field-of-view gate: rejects crops that miss the structure |
 | `score_priorcrop.py` | Cohort scoring with automatic gold-label detection (125/126 or 1/2) |
+| `paired_stats.py` | Paired method comparison: bootstrap CI, Wilcoxon, Holm correction (aggregates only) |
 
 Scripts that hard-code subject lists were left out of this snapshot.

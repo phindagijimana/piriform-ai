@@ -1,10 +1,10 @@
 # piriform-ai: training deep-learning models to segment the piriform cortex
 
-[![docs](https://github.com/phindagijimana/piriform-ai/actions/workflows/docs.yml/badge.svg)](https://phindagijimana.github.io/piriform-ai/)
+[![docs](https://github.com/phindagijimana/piriform-ai/actions/workflows/docs.yml/badge.svg)](https://phindagijimana.github.io/piriform-ai/) [![tests](https://github.com/phindagijimana/piriform-ai/actions/workflows/tests.yml/badge.svg)](https://github.com/phindagijimana/piriform-ai/actions/workflows/tests.yml)
 
 **Author:** Philbert Ndagijimana · [phindagiji@gmail.com](mailto:phindagiji@gmail.com) · [github.com/phindagijimana](https://github.com/phindagijimana)
 
-**Documentation: <https://phindagijimana.github.io/piriform-ai/>**
+**Documentation: <https://phindagijimana.github.io/piriform-ai/>** · **Short on time? Start with [For reviewers: the five-minute version](https://phindagijimana.github.io/piriform-ai/reviewers.html).**
 
 An end-to-end record of training, evaluating, and stress-testing AI segmentation models for the **piriform cortex** on brain MRI. The documentation site explains the **theory and mathematics** behind every step and walks through the **code** function by function. It also logs each **experiment** as hypothesis, design, result, and decision. Every method choice is tied to a peer-reviewed source.
 
@@ -18,7 +18,7 @@ The piriform cortex (PC) is a thin strip of olfactory cortex where the frontal a
 
 | Question | Answer | Evidence |
 |---|---|---|
-| Can a supervised 3D U-Net learn PC from 30 labelled brains? | **Yes.** nnU-Net beats both atlas methods on the same held-out brains. | Dice 0.71 / 0.69 (L/R) vs MAPER 0.66 / 0.63 and JLF 0.66 / 0.61 |
+| Can a supervised 3D U-Net learn PC from 30 labelled brains? | **Yes.** nnU-Net has significantly higher overlap than both atlas methods on the same held-out brains (paired Wilcoxon, p < 0.001). | Dice 0.71 / 0.69 (L/R) vs MAPER 0.66 / 0.63 and JLF 0.66 / 0.61 |
 | Does it transfer to a second labelled site (ADNI)? | **No.** Every variant stayed near Dice 0. The branch was stopped at a threshold fixed before the results. | ADNI 0.02–0.04 while Hammers stayed at 0.68 |
 | Does it transfer to an unlabelled clinical cohort? | **Partly.** It works only once the crop is centred on the right anatomy and brain extraction matches training. | Qualitative; cohort results are not published |
 | Can synthetic-image training (SynthSeg) remove the preprocessing dependence? | **Not yet.** It is the only model that produces non-empty masks without intensity matching, but it is below the bar. | Hammers 0.47; v2 paused at epoch 6/100 |

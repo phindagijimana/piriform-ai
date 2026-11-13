@@ -36,9 +36,76 @@ In-domain: Hammers n=30 (Final)
 .. figure:: ../figures/hammers_three_way.png
    :width: 100%
 
-   nnU-Net is better than both multi-atlas methods on every metric.
+   nnU-Net has higher overlap and lower surface distance than both
+   multi-atlas methods. Its volume error is lower than JLF's but not
+   significantly different from MAPER's (:ref:`paired-stats`).
    Sub-millimetre ASD for all methods confirms that most of the remaining
    Dice error is a boundary effect (:ref:`thin-structure-dice`).
+
+.. _paired-stats:
+
+Is the in-domain difference significant?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Each brain was held out from nnU-Net training (5-fold) and from the atlas
+set (leave-one-out), so the three methods are compared on the same 30 brains.
+``code/evaluation/paired_stats.py`` computes, per metric and hemisphere, the
+mean paired difference (nnU-Net minus baseline), a percentile-bootstrap 95%
+confidence interval over brains (10,000 resamples), and a Wilcoxon
+signed-rank test. P-values are Holm-corrected across all 16 comparisons.
+
+.. list-table::
+   :header-rows: 1
+
+   * - nnU-Net vs
+     - Metric (L / R)
+     - Mean difference (L / R)
+     - 95% CI (L / R)
+     - nnU-Net better (L / R)
+     - Holm p (L / R)
+   * - MAPER
+     - Dice
+     - +0.049 / +0.066
+     - [0.030, 0.069] / [0.047, 0.085]
+     - 23/30 / 28/30
+     - 7e-4 / 6e-6
+   * - MAPER
+     - ASD (mm)
+     - −0.09 / −0.14
+     - [−0.13, −0.05] / [−0.19, −0.11]
+     - 22/30 / 28/30
+     - 0.001 / 1e-6
+   * - MAPER
+     - \|ΔV\| (mm³)
+     - −8 / −12
+     - [−26, +9] / [−26, +2]
+     - 21/30 / 17/30
+     - **0.44 / 0.44**
+   * - JLF
+     - Dice
+     - +0.049 / +0.080
+     - [0.029, 0.070] / [0.058, 0.103]
+     - 21/30 / 25/30
+     - 7e-4 / 7e-6
+   * - JLF
+     - ASD (mm)
+     - −0.10 / −0.14
+     - [−0.14, −0.05] / [−0.18, −0.10]
+     - 20/30 / 26/30
+     - 0.003 / 2e-5
+   * - JLF
+     - \|ΔV\| (mm³)
+     - −75 / −89
+     - [−111, −35] / [−124, −51]
+     - 24/30 / 24/30
+     - 0.005 / 0.001
+
+Jaccard gives the same conclusions as Dice. The overlap and boundary gains
+are robust: every confidence interval excludes zero and nnU-Net wins on most
+brains. The volume-error advantage over MAPER is **not** established. Caveat:
+brains in the same fold share a model, so cases are not fully independent;
+the bootstrap treats them as independent and may slightly understate the
+interval width.
 
 Second site: ADNI n=37 (Parked)
 -------------------------------

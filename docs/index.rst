@@ -70,6 +70,7 @@ How to read these docs
    :maxdepth: 2
    :caption: Getting started
 
+   reviewers
    overview
    literature
    installation
