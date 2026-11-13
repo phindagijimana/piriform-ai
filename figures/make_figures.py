@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Regenerate the summary figures from aggregate numbers only.
 
-No imaging data is read. Every value below is a cohort mean copied from the
-result tables described in docs/08-results.md.
+No imaging data is read. Bar-chart values are cohort means from the result
+tables in docs/results.rst. Training curves are read from
+data/training_curves.json, written by extract_training_curves.py.
 """
+import json
 from pathlib import Path
 
 import matplotlib
@@ -82,7 +84,97 @@ def site_gap() -> None:
     plt.close(fig)
 
 
+def _ema(x, a=0.9):
+    out, m = [], None
+    for v in x:
+        if v is None:
+            out.append(m)
+            continue
+        m = v if m is None else a * m + (1 - a) * v
+        out.append(m)
+    return out
+
+
+def _curves():
+    return json.loads((OUT / "data" / "training_curves.json").read_text())
+
+
+def training_nnunet() -> None:
+    folds = _curves()["nnunet"]["001 Hammers"]
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4.2))
+    for i, (name, f) in enumerate(sorted(folds.items())):
+        lab = "train" if i == 0 else None
+        ax1.plot(f["epoch"], f["train_loss"], c=C_DL, lw=0.6, alpha=0.6, label=lab)
+        ax1.plot(f["epoch"], f["val_loss"], c=C_BAD, lw=0.6, alpha=0.6, label="validation" if i == 0 else None)
+        ax2.plot(f["epoch"], _ema(f["pseudo_dice"]), lw=1.2, label=name.replace("_", " "))
+    ax1.set_xlabel("epoch (250 iterations each)")
+    ax1.set_ylabel("Dice + CE loss (lower is better)")
+    ax1.set_title("Loss, 5 folds", fontweight="bold")
+    ax1.legend(frameon=False)
+    ax2.set_xlabel("epoch")
+    ax2.set_ylabel("validation pseudo-Dice (EMA 0.9)")
+    ax2.set_ylim(0, 0.85)
+    ax2.set_title("Validation overlap, 5 folds", fontweight="bold")
+    lr = sorted(folds.items())[0][1]
+    axr = ax2.twinx()
+    axr.plot(lr["epoch"], lr["lr"], c="k", ls=":", lw=1)
+    axr.set_ylabel("learning rate (poly 0.9)")
+    axr.spines["right"].set_visible(True)
+    ax2.legend(frameon=False, loc="center right", fontsize=9, ncol=2)
+    fig.suptitle("Stage A (Dataset001): nnU-Net training on 24 Hammers brains per fold", fontweight="bold")
+    fig.tight_layout()
+    fig.savefig(OUT / "training_nnunet.png", dpi=160)
+    plt.close(fig)
+
+
+def training_sites() -> None:
+    nn = _curves()["nnunet"]
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4.2))
+    style = {
+        "001 Hammers": C_DL, "002 Hammers crop": "#63b3ed", "003 Hammers+ADNI": "#dd6b20",
+        "004 Hammers+ADNI harmonised": "#b7791f", "005 ADNI only": C_BAD,
+    }
+    for name, col in style.items():
+        f = max(nn[name].values(), key=lambda v: len(v["epoch"]))
+        ax1.plot(f["epoch"], _ema(f["pseudo_dice"]), c=col, lw=1.3, label=name)
+        ax2.plot(f["epoch"], f["train_loss"], c=col, lw=0.8, label=name)
+    ax1.set_xlabel("epoch")
+    ax1.set_ylabel("validation pseudo-Dice (EMA 0.9)")
+    ax1.set_ylim(0, 0.85)
+    ax1.set_title("Validation overlap (longest fold)", fontweight="bold")
+    ax1.legend(frameon=False, fontsize=9)
+    ax2.set_xlabel("epoch")
+    ax2.set_ylabel("training loss")
+    ax2.set_title("Training loss (longest fold)", fontweight="bold")
+    fig.suptitle("ADNI-only training fits its training set but never generalises", fontweight="bold")
+    fig.tight_layout()
+    fig.savefig(OUT / "training_sites.png", dpi=160)
+    plt.close(fig)
+
+
+def training_synthseg() -> None:
+    ss = _curves()["synthseg"]
+    fig, ax = plt.subplots(figsize=(9, 4))
+    for tag, col in (("v1", "#805ad5"), ("v2", "#d53f8c")):
+        d = ss[tag]
+        ep = [e for p, e in zip(d["phase"], d["epoch"]) if p == "dice"]
+        lo = [l for p, l in zip(d["phase"], d["loss"]) if p == "dice"]
+        ax.plot(ep, lo, "o-", c=col, ms=4, label=f"{tag} (dice phase)")
+    ax.axvline(13, c="k", ls="--", lw=1)
+    ax.text(13.2, ax.get_ylim()[1] * 0.98, "epoch 13 scored on real T1s:\nDice 0.467 (only checkpoint\nvalidated so far)", va="top", fontsize=9)
+    ax.set_xlabel("epoch (1000 synthetic batches each)")
+    ax.set_ylabel("soft-Dice training loss")
+    ax.set_title("SynthSeg-PC: loss on synthetic images", fontweight="bold")
+    ax.legend(frameon=False)
+    fig.tight_layout()
+    fig.savefig(OUT / "training_synthseg.png", dpi=160)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     hammers_three_way()
     site_gap()
+    training_nnunet()
+    training_sites()
+    training_synthseg()
     print("wrote", sorted(p.name for p in OUT.glob("*.png")))

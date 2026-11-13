@@ -29,9 +29,10 @@ The piriform cortex (PC) is a thin strip of olfactory cortex where the frontal a
 | Section | Contents |
 |---|---|
 | [Getting started](https://phindagijimana.github.io/piriform-ai/overview.html) | Problem, datasets, installation, CLI usage, processing workflows (diagrams), output layout |
+| [Literature review](https://phindagijimana.github.io/piriform-ai/literature.html) | What each paper contributed and the design decision it led to; what was deliberately not done |
 | [Theory and mathematics](https://phindagijimana.github.io/piriform-ai/theory/segmentation.html) | Segmentation as risk minimisation; class imbalance; why thin structures cap Dice (slab model); U-Net and nnU-Net heuristics; Dice/CE loss gradients; why L/R mirroring is invalid (proof); multi-atlas registration, vote collapse, and the JLF weight solution; the SynthSeg generative model; domain-shift bounds and field-of-view geometry; metric definitions |
 | [Programming](https://phindagijimana.github.io/piriform-ai/programming/dataset_preparation.html) | Code walkthroughs pulled directly from `code/`: dataset builders, cuDNN-off entry point, Slurm chaining, SynthSeg wrapper and epoch selection, prior-crop inference, fail-closed QC gate, metric library |
-| [Experiments and results](https://phindagijimana.github.io/piriform-ai/experiments.html) | Experiment log (hypothesis → design → result → decision), results, troubleshooting, lessons learned |
+| [Experiments and results](https://phindagijimana.github.io/piriform-ai/experiments.html) | Experiment log (hypothesis → design → result → decision), training curves and their interpretation, results, troubleshooting, lessons learned |
 | [References](https://phindagijimana.github.io/piriform-ai/references.html) | Papers and software with verified DOIs |
 
 ## Repository layout

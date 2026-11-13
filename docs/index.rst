@@ -67,6 +67,7 @@ How to read these docs
    :caption: Getting started
 
    overview
+   literature
    installation
    usage
    workflows
@@ -105,6 +106,7 @@ How to read these docs
    :caption: Experiments and results
 
    experiments
+   training_dynamics
    results
    troubleshooting
    lessons

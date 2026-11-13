@@ -29,6 +29,35 @@ maximum probability atlas of the human brain, with particular reference to
 the temporal lobe. *Hum Brain Mapp.* 2003;19(4):224–247.
 `doi:10.1002/hbm.10123 <https://doi.org/10.1002/hbm.10123>`__.
 
+.. _ref-pereira:
+
+**[Pereira 2005]** Gonçalves Pereira PM, Insausti R, Artacho-Pérula E,
+Salmenperä T, Kälviäinen R, Pitkänen A. MR volumetric analysis of the
+piriform cortex and cortical amygdala in drug-refractory temporal lobe
+epilepsy. *AJNR Am J Neuroradiol.* 2005;26(2):319–332.
+`PMID 15709130 <https://pubmed.ncbi.nlm.nih.gov/15709130/>`__.
+
+.. _ref-vaughan:
+
+**[Vaughan 2014]** Vaughan DN, Jackson GD. The piriform cortex and human focal
+epilepsy. *Front Neurol.* 2014;5:259.
+`doi:10.3389/fneur.2014.00259 <https://doi.org/10.3389/fneur.2014.00259>`__.
+
+.. _ref-leonrojas:
+
+**[Leon-Rojas 2021]** Leon-Rojas JE, Iqbal S, Vos SB, et al. Resection of the
+piriform cortex for temporal lobe epilepsy: a novel approach on imaging
+segmentation and surgical application. *Br J Neurosurg.* 2024;38(3):716–721
+(online 2021).
+`doi:10.1080/02688697.2021.1966385 <https://doi.org/10.1080/02688697.2021.1966385>`__.
+
+.. _ref-urriola:
+
+**[Urriola 2025]** Urriola Yaksic JA, Lebrat L, Min H, et al. Advanced deep
+learning models enhance piriform cortex segmentation for epilepsy surgery.
+*Proc ISMRM* 2025, abstract 0137 (conference abstract).
+`doi:10.58530/2025/0137 <https://doi.org/10.58530/2025/0137>`__.
+
 Multi-atlas segmentation and registration
 -----------------------------------------
 
@@ -54,6 +83,27 @@ A reproducible evaluation of ANTs similarity metric performance in brain
 image registration. *NeuroImage.* 2011;54(3):2033–2044.
 `doi:10.1016/j.neuroimage.2010.09.025 <https://doi.org/10.1016/j.neuroimage.2010.09.025>`__.
 
+.. _ref-heckemann06:
+
+**[Heckemann 2006]** Heckemann RA, Hajnal JV, Aljabar P, Rueckert D, Hammers A.
+Automatic anatomical brain MRI segmentation combining label propagation and
+decision fusion. *NeuroImage.* 2006;33(1):115–126.
+`doi:10.1016/j.neuroimage.2006.05.061 <https://doi.org/10.1016/j.neuroimage.2006.05.061>`__.
+
+.. _ref-rueckert:
+
+**[Rueckert 1999]** Rueckert D, Sonoda LI, Hayes C, Hill DLG, Leach MO,
+Hawkes DJ. Nonrigid registration using free-form deformations: application
+to breast MR images. *IEEE Trans Med Imaging.* 1999;18(8):712–721.
+`doi:10.1109/42.796284 <https://doi.org/10.1109/42.796284>`__.
+
+.. _ref-cardoso:
+
+**[Cardoso 2015]** Cardoso MJ, Modat M, Wolz R, et al. Geodesic information
+flows: spatially-variant graphs and their application to segmentation and
+fusion. *IEEE Trans Med Imaging.* 2015;34(9):1976–1988.
+`doi:10.1109/TMI.2015.2418298 <https://doi.org/10.1109/TMI.2015.2418298>`__.
+
 Deep-learning segmentation
 --------------------------
 
@@ -75,6 +125,13 @@ segmentation. *Nat Methods.* 2021;18(2):203–211.
 **[Isensee 2024]** Isensee F, Wald T, Ulrich C, et al. nnU-Net Revisited: a call
 for rigorous validation in 3D medical image segmentation. MICCAI 2024.
 `arXiv:2404.09556 <https://arxiv.org/abs/2404.09556>`__.
+
+.. _ref-roy:
+
+**[Roy 2023]** Roy S, Koehler G, Ulrich C, et al. MedNeXt: transformer-driven
+scaling of ConvNets for medical image segmentation. *MICCAI 2023*
+(LNCS), pp. 405–415.
+`doi:10.1007/978-3-031-43901-8_39 <https://doi.org/10.1007/978-3-031-43901-8_39>`__.
 
 .. _ref-lyu:
 
