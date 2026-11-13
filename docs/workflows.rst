@@ -23,9 +23,14 @@ Preprocessing
      t1 -> n4 -> bet -> out;
    }
 
-The training images were brain-extracted with ANTs and the OASIS-30
-template. **Inference must use the same extraction.** Running the model on a
-different brain mask (FastSurfer) gave near-empty predictions. The theory is in
+Bias correction uses N3 :ref:`[Sled 1998] <ref-sled>` (Hammers and ADNI
+releases ship N3-corrected) or N4 :ref:`[Tustison 2010] <ref-tustison10>`.
+The training images were brain-extracted with the ANTs pipeline
+:ref:`[Tustison 2014] <ref-tustison14>` and the OASIS-30 template
+:ref:`[Klein 2012] <ref-klein>`, obtained from TemplateFlow
+:ref:`[Ciric 2022] <ref-ciric>`. **Inference must use the same extraction.**
+Running the model on a different brain mask (FastSurfer
+:ref:`[Henschel 2020] <ref-henschel>`) gave near-empty predictions. The theory is in
 :ref:`intensity-fingerprint`.
 
 Workflow A: supervised nnU-Net (Datasets 001–007)

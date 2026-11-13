@@ -4,6 +4,10 @@ piriform-ai
 *Training deep-learning models to segment the piriform cortex on brain MRI:
 theory, mathematics, code, and experiments.*
 
+**Author:** Philbert Ndagijimana ·
+`phindagiji@gmail.com <mailto:phindagiji@gmail.com>`__ ·
+`github.com/phindagijimana <https://github.com/phindagijimana>`__
+
 **piriform-ai** documents the complete process of building, training,
 evaluating, and stress-testing segmentation models for the human **piriform
 cortex (PC)**, a ~0.5 cm³ strip of olfactory cortex that matters in epilepsy

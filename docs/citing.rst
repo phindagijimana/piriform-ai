@@ -22,6 +22,10 @@ policy.
 This repository
 ---------------
 
+**Author:** Philbert Ndagijimana ·
+`phindagiji@gmail.com <mailto:phindagiji@gmail.com>`__ ·
+`github.com/phindagijimana <https://github.com/phindagijimana>`__
+
 If you refer to this work, please cite:
 
    Ndagijimana P. *piriform-ai: training deep-learning models to segment the

@@ -104,6 +104,79 @@ flows: spatially-variant graphs and their application to segmentation and
 fusion. *IEEE Trans Med Imaging.* 2015;34(9):1976–1988.
 `doi:10.1109/TMI.2015.2418298 <https://doi.org/10.1109/TMI.2015.2418298>`__.
 
+Atlas, data, and preprocessing
+------------------------------
+
+.. _ref-gousias:
+
+**[Gousias 2008]** Gousias IS, Rueckert D, Heckemann RA, et al. Automatic
+segmentation of brain MRIs of 2-year-olds into 83 regions of interest.
+*NeuroImage.* 2008;40(2):672–684.
+`doi:10.1016/j.neuroimage.2007.11.034 <https://doi.org/10.1016/j.neuroimage.2007.11.034>`__.
+
+.. _ref-faillenot:
+
+**[Faillenot 2017]** Faillenot I, Heckemann RA, Frot M, Hammers A.
+Macroanatomy and 3D probabilistic atlas of the human insula. *NeuroImage.*
+2017;150:88–98.
+`doi:10.1016/j.neuroimage.2017.01.073 <https://doi.org/10.1016/j.neuroimage.2017.01.073>`__.
+
+.. _ref-wild:
+
+**[Wild 2017]** Wild HM, Heckemann RA, Studholme C, Hammers A. Gyri of the
+human parietal lobe: volumes, spatial extents, automatic labelling, and
+probabilistic atlases. *PLoS One.* 2017;12(8):e0180866.
+`doi:10.1371/journal.pone.0180866 <https://doi.org/10.1371/journal.pone.0180866>`__.
+
+.. _ref-jack:
+
+**[Jack 2008]** Jack CR Jr, Bernstein MA, Fox NC, et al. The Alzheimer's
+Disease Neuroimaging Initiative (ADNI): MRI methods. *J Magn Reson Imaging.*
+2008;27(4):685–691.
+`doi:10.1002/jmri.21049 <https://doi.org/10.1002/jmri.21049>`__.
+
+.. _ref-sled:
+
+**[Sled 1998]** Sled JG, Zijdenbos AP, Evans AC. A nonparametric method for
+automatic correction of intensity nonuniformity in MRI data. *IEEE Trans Med
+Imaging.* 1998;17(1):87–97.
+`doi:10.1109/42.668698 <https://doi.org/10.1109/42.668698>`__.
+
+.. _ref-tustison10:
+
+**[Tustison 2010]** Tustison NJ, Avants BB, Cook PA, et al. N4ITK: improved N3
+bias correction. *IEEE Trans Med Imaging.* 2010;29(6):1310–1320.
+`doi:10.1109/TMI.2010.2046908 <https://doi.org/10.1109/TMI.2010.2046908>`__.
+
+.. _ref-tustison14:
+
+**[Tustison 2014]** Tustison NJ, Cook PA, Klein A, et al. Large-scale
+evaluation of ANTs and FreeSurfer cortical thickness measurements.
+*NeuroImage.* 2014;99:166–179. (Describes the ANTs brain-extraction
+pipeline.)
+`doi:10.1016/j.neuroimage.2014.05.044 <https://doi.org/10.1016/j.neuroimage.2014.05.044>`__.
+
+.. _ref-klein:
+
+**[Klein 2012]** Klein A, Tourville J. 101 labeled brain images and a
+consistent human cortical labeling protocol. *Front Neurosci.* 2012;6:171.
+(Source of the OASIS-30 brain-extraction template.)
+`doi:10.3389/fnins.2012.00171 <https://doi.org/10.3389/fnins.2012.00171>`__.
+
+.. _ref-ciric:
+
+**[Ciric 2022]** Ciric R, Thompson WH, Lorenz R, et al. TemplateFlow:
+FAIR-sharing of multi-scale, multi-species brain models. *Nat Methods.*
+2022;19(12):1568–1571.
+`doi:10.1038/s41592-022-01681-2 <https://doi.org/10.1038/s41592-022-01681-2>`__.
+
+.. _ref-henschel:
+
+**[Henschel 2020]** Henschel L, Conjeti S, Estrada S, et al. FastSurfer: a
+fast and accurate deep learning based neuroimaging pipeline. *NeuroImage.*
+2020;219:117012.
+`doi:10.1016/j.neuroimage.2020.117012 <https://doi.org/10.1016/j.neuroimage.2020.117012>`__.
+
 Deep-learning segmentation
 --------------------------
 
@@ -209,6 +282,7 @@ Data and software
 * Hammers adult brain atlas: `brain-development.org <https://brain-development.org/brain-atlases/adult-brain-atlases/>`__
 * ADNI: `adni.loni.usc.edu <https://adni.loni.usc.edu>`__
 * TemplateFlow (OASIS-30 ANTs template): `templateflow.org <https://www.templateflow.org>`__
+* MAPER implementation: `github.com/soundray/maper <https://github.com/soundray/maper>`__
 * nnU-Net v2, SynthSeg (`github.com/BBillot/SynthSeg <https://github.com/BBillot/SynthSeg>`__),
   ANTs, MIRTK, NiftySeg, FastSurfer, PyTorch, TensorFlow, nibabel, NumPy,
   SciPy, Matplotlib, Slurm.

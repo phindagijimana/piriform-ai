@@ -48,11 +48,15 @@ Datasets
      - Role
    * - Hammers adult atlas
      - 30
-     - T1 + Steinbart manual PC labels :ref:`[Hammers 2003] <ref-hammers>`
+     - T1 + Steinbart manual PC labels. Atlas: :ref:`[Hammers 2003] <ref-hammers>`,
+       extended to 30 brains :ref:`[Gousias 2008] <ref-gousias>`,
+       :ref:`[Faillenot 2017] <ref-faillenot>`, :ref:`[Wild 2017] <ref-wild>`
      - Training; in-domain test (5-fold CV)
    * - ADNI
      - 37
-     - Steinbart manual PC labels; T1s from LONI IDA under the ADNI DUA
+     - Steinbart manual PC labels; processed ADNI-1 baseline T1s
+       :ref:`[Jack 2008] <ref-jack>` from LONI IDA under the ADNI DUA.
+       Five labelled subjects had no T1 in IDA and were dropped
      - Second-site test
    * - Clinical target cohort
      - —

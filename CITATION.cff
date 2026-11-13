@@ -5,6 +5,8 @@ type: software
 authors:
   - family-names: Ndagijimana
     given-names: Philbert
+    email: phindagiji@gmail.com
+    website: "https://github.com/phindagijimana"
 date-released: 2026-11-13
 repository-code: "https://github.com/phindagijimana/piriform-ai"
 url: "https://phindagijimana.github.io/piriform-ai/"

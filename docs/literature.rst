@@ -190,6 +190,12 @@ What I deliberately did not do
 
 * **Train on labels from other protocols** (Leon-Rojas, Urriola). Mixing
   definitions would make every score uninterpretable.
+* **Train on multi-atlas outputs as if they were manual labels.** MAPER
+  agrees with manual tracing at only Jaccard 0.34–0.50, so its outputs are
+  "silver" labels at best.
+* **Add ADNI brains to the Hammers-only dataset.** That would have broken the
+  locked splits; ADNI went into a separate, re-planned dataset (Dataset003)
+  with site-stratified folds.
 * **Compare to Dice 0.90 from an abstract.** The comparison target is
   Steinbart's MAPER agreement on the same protocol.
 * **Start with a custom or newer architecture.** The nnU-Net papers argue

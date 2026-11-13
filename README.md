@@ -2,7 +2,9 @@
 
 [![docs](https://github.com/phindagijimana/piriform-ai/actions/workflows/docs.yml/badge.svg)](https://phindagijimana.github.io/piriform-ai/)
 
-**Author:** Philbert Ndagijimana · **Documentation: <https://phindagijimana.github.io/piriform-ai/>**
+**Author:** Philbert Ndagijimana · [phindagiji@gmail.com](mailto:phindagiji@gmail.com) · [github.com/phindagijimana](https://github.com/phindagijimana)
+
+**Documentation: <https://phindagijimana.github.io/piriform-ai/>**
 
 An end-to-end record of training, evaluating, and stress-testing AI segmentation models for the **piriform cortex** on brain MRI. The documentation site explains the **theory and mathematics** behind every step and walks through the **code** function by function. It also logs each **experiment** as hypothesis, design, result, and decision. Every method choice is tied to a peer-reviewed source.
 
