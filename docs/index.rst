@@ -103,6 +103,7 @@ through it.
    experiments
    training_dynamics
    results
+   engineering
 
 .. toctree::
    :maxdepth: 1

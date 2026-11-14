@@ -90,7 +90,8 @@ Where to look
    :widths: 30 70
 
    * - 10 minutes
-     - :doc:`experiments` (hypothesis → result → decision for each step)
+     - :doc:`experiments` (hypothesis → result → decision for each step) and
+       :doc:`engineering` (debugging, HPC, lessons)
    * - The evidence
      - :doc:`results`, :doc:`training_dynamics`
    * - Depth
